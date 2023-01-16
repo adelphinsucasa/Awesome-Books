@@ -11,8 +11,45 @@ body {
 
 .hero {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   width: 100%;
   height: auto;
   background-color: antiquewhite;
+  padding: 20px;
+}
+
+.book-list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(47, 47, 3);
+    color: white;
+}
+
+.book-list h2 {
+    font-size: 14px;
+}
+
+.book-list h3 {
+    font-size: 10px;
+}
+
+.book-list article {
+    padding: 10px;
+    border-bottom: 1px solid white;
+}
+
+.book-data {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: 200px;
+    margin: 0 10%;
+    padding: 5px;
+    gap: 5px;
+}
+
+.book-data button{
+    align-self: flex-start;
 }
