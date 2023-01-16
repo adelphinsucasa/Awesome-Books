@@ -7,11 +7,10 @@ function addBook(cTitle, cAuthor){
     aBooks.push(o);
 }
 
-btnAdd.addEventListener('click',()=>{
-    console.log('Adding');
-    const txtTitle = document.getElementById('title');
-    const txtAuthor = document.getElementById('author');
+addBook('test1','author1');
+addBook('test2','author2');
+addBook('test3','author3');
 
-    console.log(txtTitle.textContent);
-    console.log(txtAuthor.textContent);
-});
+for  (let i =0; i<aBooks.length; i+=1){
+    console.log(aBooks[i]);
+}
