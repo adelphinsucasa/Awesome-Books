@@ -16,7 +16,6 @@
     - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
-- [🧑🏻‍💻 Live Demo](#live-demo)
 - [💻 Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Clone](#prerequisites)
@@ -53,9 +52,6 @@
 
 #### Key Features <a name="key-features"></a>
 
-- **Mobile version**
-
-  - **Hamburger menu**
   - **Index Page**
     ->>Plain HTML Interface>>
   - **JavaScript**
@@ -65,12 +61,8 @@
     ->>Display list of books>>
     ->>Localstorage management>>
 
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## 🧑🏻‍💻 Live Demo <a name="live-demo"></a>
-
-<a href="#">Visit the Live Demo</a>
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
