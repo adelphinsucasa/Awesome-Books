@@ -1,29 +1,23 @@
-let books = [];
+let localStorageBooks = []
 
 function addBook(cTitle, cAuthor) {
-    const o = {
+    const newBook = {
         title: cTitle,
         author: cAuthor
     };
-    books.push(o);
+
+    localStorageBooks.push(newBook);
+    localStorage.setItem('localStorageBooks', JSON.stringify(localStorageBooks));
+
+    console.log(localStorageBooks);
 }
 
 function removeBook(cTitle) {
-    const result = books.filter(book => book.title != cTitle);
-    books = result;
-
-    console.log(books);
+    //const result = localStorageBooks.filter(book => book.title != cTitle);
+    //books = result;
 }
-
-addBook('Padre Rico Padre Pobre', 'Robert Kijosaki');
-addBook('Absalom, Absalom!', 'William Faulkner');
-addBook('A time to kill', 'John Grisham');
-
-for (let i = 0; i < books.length; i += 1) {
-    console.log(books[i]);
-}
-
-removeBook('Padre Rico Padre Pobre');
+//addBook('Try Again','bbb')
+//removeBook('Padre Rico Padre Pobre');
 
 /* -------------------------------------------------------------------------- */
 /*                              DOM MANIPULATION                              */
@@ -32,10 +26,11 @@ const div = document.querySelector('#bookListContainer')
 const ul = document.querySelector('#ulBookList')
 
 let aux = ''
-for (let i = 0; i < books.length; i++) {
+
+for (let i = 0; i < localStorageBooks.length; i++) {
     aux += `<li>
-                <p>${books[i].title}</p>
-                <p>${books[i].author}</p>
+                <p>${localStorageBooks[i].title}</p>
+                <p>${localStorageBooks[i].author}</p>
                 <button id="btnRemove${i} type="button">Remove</button>
                 <hr />
             </li>`
@@ -43,3 +38,19 @@ for (let i = 0; i < books.length; i++) {
 }
 ul.innerHTML = aux;
 div.appendChild(ul)
+
+const addForm = document.getElementById('addBookForm')
+
+addForm.addEventListener('submit', ()=>{
+    addBook(addForm['title'].value, addForm['author'].value);
+    window.location.reload();
+});
+
+window.addEventListener('load', () => {
+    if (JSON.parse(localStorage.getItem('localStorageBooks')) === null) {
+        localStorage.setItem('localStorageBooks', JSON.stringify(localStorageBooks));
+    } else {
+        localStorageBooks = JSON.parse(localStorage.getItem('localStorageBooks'));
+        
+    }
+});
