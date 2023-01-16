@@ -1,4 +1,4 @@
-<a name="Awesome-Books By Jose Delphin"></a>
+<a name="Awesome-Books"></a>
 
 <div align="center">
 
@@ -57,13 +57,13 @@
 
   - **Hamburger menu**
   - **Index Page**
-    ->>comming soon>>
-
-  **Desktop version**
-
-  - **Nav Bar**
-  - **Index Page**
-    ->>Comming soon>>
+    ->>Plain HTML Interface>>
+  - **JavaScript**
+    ->>Dom Manipulation>>
+    ->>Add Book function>>
+    ->>Remove Book Function>>
+    ->>Display list of books>>
+    ->>Localstorage management>>
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -102,6 +102,15 @@ ve Venezuela 💓
 - GitHub: [@githubhandle](https://github.com/adelphinsucasa)
 - Twitter: [@twitterhandle](@josedelphin)
 - LinkedIn: [LinkedIn](@adelphin)
+
+👤 **Author2**
+
+: Marcelo Alarcon
+Bo Bolivia 💓
+
+- GitHub: [@githubhandle](https://github.com/chelobotix/)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/marceloalarconb/
+)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
