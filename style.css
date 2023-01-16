@@ -12,7 +12,7 @@ body {
 .hero {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  align-items: center;
   width: 100%;
   height: auto;
   background-color: antiquewhite;
@@ -21,6 +21,7 @@ body {
 
 .book-list {
     width: 100%;
+    height: 400px;
     display: flex;
     flex-direction: column;
     background-color: rgb(47, 47, 3);
@@ -38,6 +39,10 @@ body {
 .book-list article {
     padding: 10px;
     border-bottom: 1px solid white;
+}
+
+.book-list article button {
+    margin-top: 5px;
 }
 
 .book-data {
