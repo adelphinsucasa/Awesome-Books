@@ -1,16 +1,24 @@
-const btnAdd = document.getElementById('btnAdd');
-let aBooks = [];
+let books = [];
 
 function addBook(cTitle, cAuthor){
     const o = {title: cTitle,
                author: cAuthor};
-    aBooks.push(o);
+    books.push(o);
 }
 
-addBook('test1','author1');
-addBook('test2','author2');
-addBook('test3','author3');
+function removeBook(cTitle){
+    const result = books.filter(book => book.title != cTitle );
+    books = result;
 
-for  (let i =0; i<aBooks.length; i+=1){
-    console.log(aBooks[i]);
+    console.log(books);
 }
+
+addBook('Padre Rico Padre Pobre','Robert Kijosaki');
+addBook('Absalom, Absalom!','William Faulkner');
+addBook('A time to kill','John Grisham');
+
+for  (let i =0; i<books.length; i+=1){
+    console.log(books[i]);
+}
+
+removeBook('Padre Rico Padre Pobre');
