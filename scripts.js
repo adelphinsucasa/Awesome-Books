@@ -13,12 +13,16 @@ function addBook(cTitle, cAuthor) {
 }
 
 function removeBook(index) {
-  localStorageBooks.splice(index, 1);
+  const aux = localStorageBooks[index].title
+  const result = localStorageBooks.filter(book => book.title != aux)
+  localStorageBooks = result
   localStorage.setItem('localStorageBooks', JSON.stringify(localStorageBooks));
   window.location.reload();
 }
 
 window.addEventListener('load', () => {
+
+
   if (JSON.parse(localStorage.getItem('localStorageBooks')) === null) {
     localStorage.setItem('localStorageBooks', JSON.stringify(localStorageBooks));
   } else {
@@ -51,3 +55,7 @@ window.addEventListener('load', () => {
 addForm.addEventListener('submit', () => {
   addBook(addForm.title.value, addForm.author.value);
 });
+
+
+
+
