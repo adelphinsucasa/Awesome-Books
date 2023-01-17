@@ -17,7 +17,7 @@ class BookCollection {
   }
 
   removeBook(index) {
-    const result = this.books.filter((book,i) => i !== index);
+    const result = this.books.filter((book, i) => i !== index);
     this.books = result;
     localStorage.setItem('localStorageBooks', JSON.stringify(this.books));
     window.location.reload();
