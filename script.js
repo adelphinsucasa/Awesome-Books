@@ -28,7 +28,7 @@ class BookCollection {
     return this.books
   }
 
-  setBooks(books){
+  setBooks(books) {
     this.books = books;
   }
 }
@@ -50,10 +50,8 @@ window.addEventListener('load', () => {
   let aux = '';
   for (let i = 0; i < newBooksCollection.getBooks().length; i += 1) {
     aux += `<li>
-                <p>${newBooksCollection.getBooks()[i].title}</p>
-                <p>${newBooksCollection.getBooks()[i].author}</p>
+                <p>"${newBooksCollection.getBooks()[i].title}" by ${newBooksCollection.getBooks()[i].author}</p>
                 <button class="btnRemove" id="btnRemove${i} type="button">Remove</button>
-                <hr />
             </li>`;
   }
   ul.innerHTML = aux;

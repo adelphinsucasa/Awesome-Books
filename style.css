@@ -3,19 +3,12 @@
   margin: 0;
 }
 
-.bookListContainer {
+div.bookList {
   display: flex;
   flex-direction: column;
-  align-items: center;
-}
-
-div.bookList {
-  width: 80%;
-  margin: 30px 0px;
-}
-
-div.bookList li {
-  margin-top: 10px;
+  margin: 30px 20px;
+  background-color: rgb(7, 92, 219);
+  border: 2px solid #000;
 }
 
 ul.bookList {
@@ -23,7 +16,24 @@ ul.bookList {
   padding: 0;
 }
 
-div.addBookForm, div.addBookForm form {
+div.bookList li {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+div.bookList li:nth-child(odd) {
+  background-color: #e6ebeb;
+}
+
+div.bookList li:nth-child(even) {
+  background-color: #fff;
+}
+
+div.addBookForm,
+div.addBookForm form {
   display: flex;
   flex-direction: column;
   align-items: center;
