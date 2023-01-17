@@ -53,11 +53,13 @@
 #### Key Features <a name="key-features"></a>
 
   - **Index Page**
-    ->>Plain HTML Interface>>
+    ->>HTML Interface with CSS>>
   - **JavaScript**
     ->>Dom Manipulation>>
-    ->>Add Book function>>
-    ->>Remove Book Function>>
+    ->>Implement BookCollection Class>>
+       *AddBook Method
+       *RemoveBook Method
+       *Getter and Setter
     ->>Display list of books>>
     ->>Localstorage management>>
 
