@@ -3,12 +3,21 @@
   margin: 0;
 }
 
+.mainBooksContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+}
+
 div.bookList {
   display: flex;
   flex-direction: column;
   margin: 30px 20px;
   background-color: rgb(7, 92, 219);
   border: 2px solid #000;
+  max-width: 400px;
+  min-width: 315px;
 }
 
 ul.bookList {
@@ -32,21 +41,26 @@ div.bookList li:nth-child(even) {
   background-color: #fff;
 }
 
-div.addBookForm,
-div.addBookForm form {
+hr {
+  width: 30%;
+  margin: 0 auto;
+}
+
+.formContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 20px 0;
 }
 
-div.addBookForm form {
-  width: 80%;
-  margin: 0 10%;
-  align-items: stretch;
+.formContainer form {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
   gap: 5px;
 }
 
 #btnAdd {
-  align-self: flex-start;
+  align-self: flex-end;
   padding: 0 20px;
 }

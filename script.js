@@ -3,9 +3,8 @@ const ul = document.querySelector('#ulBookList');
 const addForm = document.getElementById('addBookForm');
 
 class BookCollection {
-
   constructor() {
-    this.books = []
+    this.books = [];
   }
 
   addBook(cTitle, cAuthor) {
@@ -18,14 +17,14 @@ class BookCollection {
   }
 
   removeBook(index) {
-    const result = this.books.filter(book => book.title != this.books[index].title)
-    this.books = result
+    const result = this.books.filter((book) => book.title !== this.books[index].title);
+    this.books = result;
     localStorage.setItem('localStorageBooks', JSON.stringify(this.books));
     window.location.reload();
   }
 
   getBooks() {
-    return this.books
+    return this.books;
   }
 
   setBooks(books) {
@@ -33,10 +32,9 @@ class BookCollection {
   }
 }
 
-let newBooksCollection = new BookCollection()
+const newBooksCollection = new BookCollection();
 
 window.addEventListener('load', () => {
-
   if (JSON.parse(localStorage.getItem('localStorageBooks')) === null) {
     localStorage.setItem('localStorageBooks', JSON.stringify(newBooksCollection.getBooks()));
   } else {
