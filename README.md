@@ -52,7 +52,7 @@
 
 #### Key Features <a name="key-features"></a>
 
-  - **Index Page**
+  - **Single Page Application.**
     ->>HTML Interface with CSS>>
   - **JavaScript**
     ->>Dom Manipulation>>
@@ -62,6 +62,8 @@
        *Getter and Setter
     ->>Display list of books>>
     ->>Localstorage management>>
+    ->>Show Current Date Option using function setInterval>>
+    ->>Switch between sections dinamically>>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
