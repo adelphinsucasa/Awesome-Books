@@ -12,15 +12,15 @@
       <nav>
         <p>Awesome Books</p>
         <ul>
-          <li><a id="list" href="#">List</a></li>
-          <li><a id="" href="#">Add new</a></li>
-          <li><a id="" href="#">Contact</a></li>
+          <li><a id="listBook" href="#">List</a></li>
+          <li><a id="addBook" href="#addBook">Add new</a></li>
+          <li><a id="contact" href="#contact">Contact</a></li>
         </ul>
       </nav>
     </header>
 
     <main>
-      <section class="bookList">
+      <section class="bookList visible">
         <div class="booksContainer">
           <h1>All awesome Books</h1>
           <div id="bookListContainer" class="bookList">
@@ -29,22 +29,26 @@
         </div>
       </section>
 
-      <section class="addBook">
-        <h1>Add a new book</h1>
-        <form id="addBookForm">
-          <input type="text" name="title" id="title" placeholder="Title" />
-          <input type="text" name="author" id="author" placeholder="Author" />
-          <input class="btnAdd" id="btnAdd" type="submit" value="Add" />
-        </form>
+      <section class="addBook invisible">
+        <div class="addBook">
+          <h1>Add a new book</h1>
+          <form id="addBookForm">
+            <input type="text" name="title" id="title" placeholder="Title" />
+            <input type="text" name="author" id="author" placeholder="Author" />
+            <input class="btnAdd" id="btnAdd" type="submit" value="Add" />
+          </form>
+        </div>
       </section>
 
-      <section class="contact">
-        <p>Do have any question or just want to say "Hello"?<br />You can reach out to us!</p>
-        <ul>
-          <li>Our email: mail@mail.com</li>
-          <li>Our phone number:0043586534334</li>
-          <li>Our address:Streetname 22,84503 City, Country</li>
-        </ul>
+      <section class="contact invisible">
+        <div class="contact">
+          <p>Do have any question or just want to say "Hello"?<br />You can reach out to us!</p>
+          <ul>
+            <li>Our email: mail@mail.com</li>
+            <li>Our phone number:0043586534334</li>
+            <li>Our address:Streetname 22,84503 City, Country</li>
+          </ul>
+        </div>
       </section>
 
       <footer>Copyright</footer>

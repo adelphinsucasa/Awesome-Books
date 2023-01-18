@@ -45,6 +45,39 @@ window.addEventListener('load', () => {
   /*                              DOM MANIPULATION                              */
   /* -------------------------------------------------------------------------- */
 
+  // NAVBAR ELEMENTS
+  const listBookLink = document.querySelector('#listBook');
+  const addNewLink = document.querySelector('#addBook');
+  const contactLink = document.querySelector('#contact');
+
+  const bookListSection = document.querySelector('section.bookList')
+  const addNewSection = document.querySelector('section.addBook')
+  const contactSection = document.querySelector('section.contact')
+
+  function hideShow (showElem, hideElem1, hideElem2){
+    showElem.classList.remove('invisible')
+    showElem.classList.add('visible')
+
+    hideElem1.classList.remove('visible')
+    hideElem1.classList.add('invisible')
+
+    hideElem2.classList.remove('visible')
+    hideElem2.classList.add('invisible')
+  }
+
+  listBookLink.addEventListener('click',()=>{
+    hideShow(bookListSection, addNewSection, contactSection)
+  })
+
+  addNewLink.addEventListener('click',()=>{
+    hideShow(addNewSection, bookListSection, contactSection)
+  })
+
+  contactLink.addEventListener('click',()=>{
+    hideShow(contactSection, addNewSection, bookListSection)
+  })
+
+  // LIST BOOK ELEMENTS
   let aux = '';
   for (let i = 0; i < newBooksCollection.getBooks().length; i += 1) {
     aux += `<li class='bookList'>
@@ -65,3 +98,4 @@ window.addEventListener('load', () => {
 addForm.addEventListener('submit', () => {
   newBooksCollection.addBook(addForm.title.value, addForm.author.value);
 });
+
