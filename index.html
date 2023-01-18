@@ -10,8 +10,8 @@
   <body>
     <header>
       <nav>
-        <p>Awesome Books</p>
-        <ul>
+        <p class="header"><a class="header" href="#">Awesome Books</a></p>
+        <ul class="nav">
           <li><a id="listBook" href="#">List</a></li>
           <li><a id="addBook" href="#addBook">Add new</a></li>
           <li><a id="contact" href="#contact">Contact</a></li>
@@ -20,6 +20,9 @@
     </header>
 
     <main>
+      <section class="date">
+        <p id="date" class="date"></p>
+      </section>
       <section class="bookList visible">
         <div class="booksContainer">
           <h1>All awesome Books</h1>
@@ -29,7 +32,7 @@
         </div>
       </section>
 
-      <section class="addBook invisible">
+      <section class="addBook">
         <div class="addBook">
           <h1>Add a new book</h1>
           <form id="addBookForm">

@@ -54,7 +54,7 @@ window.addEventListener('load', () => {
   const addNewSection = document.querySelector('section.addBook')
   const contactSection = document.querySelector('section.contact')
 
-  function hideShow (showElem, hideElem1, hideElem2){
+  function hideShow(showElem, hideElem1, hideElem2) {
     showElem.classList.remove('invisible')
     showElem.classList.add('visible')
 
@@ -65,15 +65,15 @@ window.addEventListener('load', () => {
     hideElem2.classList.add('invisible')
   }
 
-  listBookLink.addEventListener('click',()=>{
+  listBookLink.addEventListener('click', () => {
     hideShow(bookListSection, addNewSection, contactSection)
   })
 
-  addNewLink.addEventListener('click',()=>{
+  addNewLink.addEventListener('click', () => {
     hideShow(addNewSection, bookListSection, contactSection)
   })
 
-  contactLink.addEventListener('click',()=>{
+  contactLink.addEventListener('click', () => {
     hideShow(contactSection, addNewSection, bookListSection)
   })
 
@@ -95,7 +95,25 @@ window.addEventListener('load', () => {
   });
 });
 
+
+/* -------------------------------------------------------------------------- */
+/*                               Event Listeners                              */
+/* -------------------------------------------------------------------------- */
+
 addForm.addEventListener('submit', () => {
   newBooksCollection.addBook(addForm.title.value, addForm.author.value);
 });
+
+
+// DATE
+function getDate() {
+  const dateField = document.querySelector('#date')
+  let actualDate = new Date()
+  var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+  dateField.textContent = actualDate.toLocaleDateString("en-US", options) + " " + actualDate.toTimeString().split(' ')[0]
+}
+
+setInterval(() => {
+  getDate()
+}, 1000)
 
