@@ -47,7 +47,7 @@ window.addEventListener('load', () => {
 
   let aux = '';
   for (let i = 0; i < newBooksCollection.getBooks().length; i += 1) {
-    aux += `<li>
+    aux += `<li class='bookList'>
                 <p>"${newBooksCollection.getBooks()[i].title}" by ${newBooksCollection.getBooks()[i].author}</p>
                 <button class="btnRemove" id="btnRemove${i} type="button">Remove</button>
             </li>`;

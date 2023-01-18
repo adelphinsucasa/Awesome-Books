@@ -3,14 +3,14 @@
   margin: 0;
 }
 
-.mainBooksContainer {
+section.bookList div.booksContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 10px;
 }
 
-div.bookList {
+section.bookList div.booksContainer div.bookList {
   display: flex;
   flex-direction: column;
   margin: 30px 20px;
@@ -20,12 +20,12 @@ div.bookList {
   min-width: 315px;
 }
 
-ul.bookList {
+section.bookList div.booksContainer div.bookList ul.bookList {
   list-style: none;
   padding: 0;
 }
 
-div.bookList li {
+section.bookList div.booksContainer div.bookList ul.bookList li.bookList {
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -33,34 +33,29 @@ div.bookList li {
   padding: 10px 20px;
 }
 
-div.bookList li:nth-child(odd) {
+div.bookList li.bookList:nth-child(odd) {
   background-color: #e6ebeb;
 }
 
-div.bookList li:nth-child(even) {
+div.bookList li.bookList:nth-child(even) {
   background-color: #fff;
 }
 
-hr {
-  width: 30%;
-  margin: 0 auto;
-}
-
-.formContainer {
+section.addBook {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 20px 0;
 }
 
-.formContainer form {
+section.addBook form {
   display: flex;
   flex-direction: column;
   padding: 5px;
   gap: 5px;
 }
 
-#btnAdd {
+section.addBook form .btnAdd {
   align-self: flex-end;
   padding: 0 20px;
 }

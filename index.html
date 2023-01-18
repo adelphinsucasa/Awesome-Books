@@ -8,31 +8,46 @@
     <title>Awesome Books By Jose Delphin</title>
   </head>
   <body>
-    <main>
-      <header>
-        <nav></nav>
-      </header>
+    <header>
+      <nav>
+        <p>Awesome Books</p>
+        <ul>
+          <li><a id="list" href="#">List</a></li>
+          <li><a id="" href="#">Add new</a></li>
+          <li><a id="" href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
 
-      <section>
-        <div class="mainBooksContainer">
-          <h1>Awesome Books</h1>
+    <main>
+      <section class="bookList">
+        <div class="booksContainer">
+          <h1>All awesome Books</h1>
           <div id="bookListContainer" class="bookList">
             <ul id="ulBookList" class="bookList"></ul>
           </div>
         </div>
-        
-        <hr>
-        <div class="formContainer">
-          <h1>Add a new book</h1>
-          <form id="addBookForm">
-            <input type="text" name="title" id="title" placeholder="Title" />
-            <input type="text" name="author" id="author" placeholder="Author" />
-            <input id="btnAdd" type="submit" value="Add" />
-          </form>
-        </div>
       </section>
 
-      <footer></footer>
+      <section class="addBook">
+        <h1>Add a new book</h1>
+        <form id="addBookForm">
+          <input type="text" name="title" id="title" placeholder="Title" />
+          <input type="text" name="author" id="author" placeholder="Author" />
+          <input class="btnAdd" id="btnAdd" type="submit" value="Add" />
+        </form>
+      </section>
+
+      <section class="contact">
+        <p>Do have any question or just want to say "Hello"?<br />You can reach out to us!</p>
+        <ul>
+          <li>Our email: mail@mail.com</li>
+          <li>Our phone number:0043586534334</li>
+          <li>Our address:Streetname 22,84503 City, Country</li>
+        </ul>
+      </section>
+
+      <footer>Copyright</footer>
     </main>
 
     <script src="script.js"></script>
