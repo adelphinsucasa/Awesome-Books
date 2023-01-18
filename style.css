@@ -56,7 +56,8 @@ header nav ul.nav li a.active {
 main {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: stretch;
+  width: 100%;
 }
 
 main section.date {
@@ -70,6 +71,7 @@ main section.bookList {
   max-width: 100%;
   min-width: 290px;
   margin: 50px 20px 20px 20px;
+  height: 390px;
 }
 
 main section.bookList div.booksContainer {
@@ -85,19 +87,13 @@ main section.bookList div.booksContainer div.bookList {
   flex-direction: column;
   width: 100%;
   border: 2px solid #000;
+  height: 300px;
+  overflow: scroll;
 }
 
 main section.bookList div.booksContainer div.bookList ul.bookList {
   list-style: none;
   padding: 0;
-}
-
-main section.bookList div.booksContainer div.bookList ul.bookList li.bookList {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
 }
 
 div.bookList li.bookList:nth-child(odd) {
@@ -108,8 +104,17 @@ div.bookList li.bookList:nth-child(even) {
   background-color: #fff;
 }
 
+main section.bookList div.booksContainer div.bookList ul.bookList li.bookList {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
 section.addBook {
-  margin: 20px 0;
+  margin: 50px 20px 20px 20px;
+  height: 390px;
 }
 
 section.addBook div.addBook {
@@ -129,6 +134,30 @@ section.addBook form {
 section.addBook form .btnAdd {
   align-self: flex-end;
   padding: 0 20px;
+}
+
+section.contact {
+  margin: 50px 20px 20px 20px;
+  height: 390px;
+}
+
+section.contact div.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 0 20px;
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+
+footer {
+  display: flex;
+  justify-content: start;
+  width: calc(100% - 44px);
+  margin: 20px;
+  padding: 10px;
+  border: 2px solid #000;
 }
 
 @media screen and (max-width: 320px) {

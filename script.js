@@ -50,32 +50,32 @@ window.addEventListener('load', () => {
   const addNewLink = document.querySelector('#addBook');
   const contactLink = document.querySelector('#contact');
 
-  const bookListSection = document.querySelector('section.bookList')
-  const addNewSection = document.querySelector('section.addBook')
-  const contactSection = document.querySelector('section.contact')
+  const bookListSection = document.querySelector('section.bookList');
+  const addNewSection = document.querySelector('section.addBook');
+  const contactSection = document.querySelector('section.contact');
 
   function hideShow(showElem, hideElem1, hideElem2) {
-    showElem.classList.remove('invisible')
-    showElem.classList.add('visible')
+    showElem.classList.remove('invisible');
+    showElem.classList.add('visible');
 
-    hideElem1.classList.remove('visible')
-    hideElem1.classList.add('invisible')
+    hideElem1.classList.remove('visible');
+    hideElem1.classList.add('invisible');
 
-    hideElem2.classList.remove('visible')
-    hideElem2.classList.add('invisible')
+    hideElem2.classList.remove('visible');
+    hideElem2.classList.add('invisible');
   }
 
   listBookLink.addEventListener('click', () => {
-    hideShow(bookListSection, addNewSection, contactSection)
-  })
+    hideShow(bookListSection, addNewSection, contactSection);
+  });
 
   addNewLink.addEventListener('click', () => {
-    hideShow(addNewSection, bookListSection, contactSection)
-  })
+    hideShow(addNewSection, bookListSection, contactSection);
+  });
 
   contactLink.addEventListener('click', () => {
-    hideShow(contactSection, addNewSection, bookListSection)
-  })
+    hideShow(contactSection, addNewSection, bookListSection);
+  });
 
   // LIST BOOK ELEMENTS
   let aux = '';
@@ -95,7 +95,6 @@ window.addEventListener('load', () => {
   });
 });
 
-
 /* -------------------------------------------------------------------------- */
 /*                               Event Listeners                              */
 /* -------------------------------------------------------------------------- */
@@ -104,16 +103,16 @@ addForm.addEventListener('submit', () => {
   newBooksCollection.addBook(addForm.title.value, addForm.author.value);
 });
 
-
 // DATE
 function getDate() {
-  const dateField = document.querySelector('#date')
-  let actualDate = new Date()
-  var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-  dateField.textContent = actualDate.toLocaleDateString("en-US", options) + " " + actualDate.toTimeString().split(' ')[0]
+  const dateField = document.querySelector('#date');
+  const actualDate = new Date();
+  const options = {
+    weekday: 'long', year: 'numeric', month: 'long', day: 'numeric',
+  };
+  dateField.textContent = `${actualDate.toLocaleDateString('en-US', options)} ${actualDate.toTimeString().split(' ')[0]}`;
 }
 
 setInterval(() => {
-  getDate()
-}, 1000)
-
+  getDate();
+}, 1000);
